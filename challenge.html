@@ -39,7 +39,7 @@
                 <ul>
                    <li><a href="challenge.html#CCS">Cross-Cultural Spotting (CCS)</a></li>
                     <li><a href="challenge.html#STR">Spot-then-Recognize (STR)</a></li>
-                    <li><a href="challenge.html#training">Recommended Training Databases</a></li>
+                    <!-- <li><a href="challenge.html#training">Recommended Training Databases</a></li> -->
                     <li><a href="challenge.html#submission">Submission</a></li>
                     <!-- <li><a href="challenge.html#winners">Top three winners</a></li> -->
                     <li><a href="challenge.html#questions">Frequently Asked Questions</a></li>
@@ -60,8 +60,8 @@
             <section>
                 <p>This year's Grand Challenge comprises of two sub-challenges:</p>
                 <ul>
-                    <li>Cross-Cultural Spotting (CCS) Challenge</li>
-                    <li>Spot-then-Recognize (STR) Challenge</li>
+                    <li><a href="#CCS">Cross-Cultural Spotting (CCS) Challenge</a></li>
+                    <li><a href="#STR">Spot-then-Recognize (STR) Challenge</a></li>
                 </ul>
                 <p align="center">Click <a href="files/CfP_MEGC2024.pdf">here</a> to download the CFP.</p>
                 <!--
@@ -88,13 +88,14 @@
             </section>
 
             <section>
+                <a name="CCS"></a>
                 <header class="main">
-                    <h2 class="major"><span>ME and Macro-expression Spotting task</span></h2> <a name="CCS"></a>
+                    <h2 class="major"><span>Cross-Cultural Spotting (CCS) Task</span></h2>
                 </header>
 
                 <p>To facilitate the establishment of robust and transferable ME spotting methods, an unseen cross-cultural long video test set will be used to validate the efficacy of spotting algorithms. By “unseen” and “cross-cultural”, we mean that the data has not been publicly released, and consists of subjects from diverse ethnicities and cultures. All participating algorithms are required to run on this test set and submit their results for spotting micro- and macro-expressions.</p>
 
-                <p>This unseen test set will contain at least 30 long videos curated from unreleased data of the SAMM and CAS(ME)3 datasets. Both these datasets have different video frame rates (SAMM: 200 fps; CAS(ME)<sup>3</sup>: 30 fps), which will challenge participants to submit techniques that are also robust toward temporal sampling. For learning-based techniques, participants can use any kind of training set or combination of training sets, from the vast <a href="#training">selection of databases available</a>.</p> 
+                <p>The unseen test set, which was first used in MEGC2023, will contain at least 30 long videos curated from unreleased data of the SAMM and CAS(ME)<sup>3</sup> datasets. Both these datasets have different video frame rates (SAMM: 200 fps; CAS(ME)<sup>3</sup>: 30 fps), which will challenge participants to submit techniques that are also robust toward temporal sampling. For learning-based techniques, participants can use any kind of training set or combination of training sets, from the vast <a href="#training">selection of databases available</a>.</p> 
 
                 <h3>Recommended Training Databases</h3>  <a name="training"></a>
                 <uL>
@@ -165,17 +166,14 @@
                 <p></p>
 
                 <h3>Unseen Test Dataset</h3>  <a name="test"></a>
-                <uL>
-                    <LI>This year, in order to evaluate algorithms' performance more fairly, based on the experience gained from CAS(ME)3, SAMM Long Videos, SMIC-E-long, CAS(ME)3 and 4DME, we will build an unseen cross-cultural long-video test set  and the sample size will be tripled from last year’s challenge.
+                <ul>
+                    <li>This year, we will be using the same unseen cross-cultural long-video test set to evaluate spotting algorithms' performances in a fairer manner.
 
-
-                    <LI>The unseen testing set (MEGC2023-testSet) contains 30 long video, including 10 long videos from
+                    <li>The unseen testing set (<tt>MEGC2023-testSet</tt>) contains 30 long video, including 10 long videos from
                         SAMM
                         (SAMM Challenge dataset) and 20 clips cropped from different videos in CAS(ME)<sup>3</sup> (unreleased before). The
-                        frame
-                        rate for SAMM Challenge dataset is 200fps and the frame rate for CAS(ME)<sup>3</sup> is 30
-                        fps. The participants should test on this unseen dataset.
-                    <LI>To download the MEGC2023-testSet, Download and fill in the <a
+                        frame rate for SAMM Challenge dataset is 200fps and the frame rate for CAS(ME)<sup>3</sup> is 30 fps. The participants should test on this unseen dataset.
+                    <LI>To obtain the <tt>MEGC2023-testSet</tt>, download and fill in the <a
                             href="files/SAMM_ReleaseAgreementV2.pdf">license agreement form of SAMM Challenge
                         dataset</a> and
                         the <a href="files/CAS3_clip_ReleaseAgreement.pdf">license agreement form of CAS(ME)<sup>3</sup>_clip</a>,
@@ -183,7 +181,7 @@
                         link: <a href="https://www.wjx.top/vm/PpmFKf7.aspx# ">https://www.wjx.top/vm/PpmFKf7.aspx# </a>.
 
                         <uL>
-                            <li> For the request from a bank or company, the participants need to ask their director or
+                            <li> For the request from a bank or company, the participants are required to ask their director or
                                 CEO to sign the form.
                             </li>
                             <li> Reference:
@@ -210,31 +208,33 @@
                 <p></p>
                 <h3>Evaluation Protocol</h3>  <a name="Eval"></a>
                 <uL>
+                    <li>Information on the Codalab Leaderboard will be available soon.</li>
+                    <!--
                     <Li> Participant should test the proposed algorithm on the unseen dataset and upload the result
                         to the <a href="https://codalab.lisn.upsaclay.fr/competitions/14254">Leaderboard (https://codalab.lisn.upsaclay.fr/competitions/14254)</a> for the evaluation.
-
-                     <Li> Baseline Method:<br/>
+                    -->
+                     <Li>Baseline Method:<br/>
                         Please cite:
                         <br/>
                         Zhang, L. W., Li, J., Wang, S. J., Duan, X. H., Yan, W. J., Xie, H. Y., & Huang, S. C. (2020, November). Spatio-temporal fusion for macro-and micro-expression spotting in long video sequences. In 2020 15th IEEE International Conference on Automatic Face and Gesture Recognition (FG 2020) (pp. 734-741). IEEE.
-                    <Li> Baseline result: Available on the <a
+                    <Li>MEGC2023 Result: <a
                             href="https://codalab.lisn.upsaclay.fr/competitions/14254">Leaderboard</a>
-                    <Li><b><a href="https://codalab.lisn.upsaclay.fr/competitions/14254">Leaderboard</a> </b> ：
-                                a <b>zip</b> file contains your predicted csv files
-                   with the following labels:
-                               <ul>
-                                  <li>cas_pred.csv
-                               <li>samm_pred.csv
-
-                              </ul>
-                            <li> An example submission can be seen at <a href="files/example_submission.zip">example_submission</a>
-                                and <a href="files/example_submission_withoutExpType.zip">example_submission_withoutExpType</a>.
-
-                            <li> Note: For submission without labelling expression type (me or mae), the labelling
+                    <li>Submissions to the Leaderboard is in a form of
+                            a <b>zip</b> file containining your predicted csv files with the following labels:
+                            <ul>
+                                <li>cas_pred.csv
+                                <li>samm_pred.csv
+                            </ul>
+                    </li>
+                    <li> An example submission can be seen at <a href="files/example_submission.zip">example_submission</a>
+                           and <a href="files/example_submission_withoutExpType.zip">example_submission_withoutExpType</a>.
+                    </li>
+                    <li> Note: For submission without labelling expression type (me or mae), the labelling
                                 will be done automatically using ME threshold of 0.5s (15 frames for CAS and 100
                                 frames for SAMM).
-                        </ul>
-
+                    </li>        
+                    </ul>
+                    <!--
                     <Li><b>submission stage</b>: TBD
                         <ul>
                             <li> The participants could upload the result and then the Leaderboards will
@@ -252,28 +252,27 @@
                                 validate the performance of their method.
                             <li> The leaderboard will calculate and display the uploaded results and real-time
                                 ranking.
-
                         </ul>
-
-
+                    -->
                 </uL>
-
 
             </section>
 
+
             <section>
-                <h2 class="major"><span>Submission</span></h2>
                 <a name="submission"></a>
+                <h2 class="major"><span>Submission</span></h2>
                 <p> Please note: The submission deadline is at 11:59 p.m. of the stated deadline date <a
                         href="https://www.timeanddate.com/time/zones/aoe">Anywhere</a> on Earth.</p>
                 <uL>
-                    <Li><b>Submission platform: </b> TBD
+                    <Li><b>Submission platform: </b> 
+                        TBD
                     <Li><b>Submission Deadline:</b>
-                        14th July 2023
+                        12th July 2023
                     <Li><b>Notification:</b>
                         TBD
                     <Li><b>Camera-ready:</b>
-                    <del>06th August 2023</del> 31st July 2023 (Hard deadline)
+                        29th July 2024
                     <Li><b>Submission guidelines:</b>
 
                         <ul>
