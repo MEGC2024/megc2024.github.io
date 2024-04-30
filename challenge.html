@@ -18,8 +18,8 @@
     <header id="header">
         <div class="logo container">
             <div>
-                <h1><a href="index.html" id="logo">ACMMM MEGC2023 </a></h1>
-                <p>Facial Micro-Expression Grand Challenge 2022</p>
+                <h1><a href="index.html" id="logo">ACM MM MEGC2024 </a></h1>
+                <p>Facial Micro-Expression Grand Challenge 2024</p>
             </div>
         </div>
     </header>
@@ -37,18 +37,18 @@
             <li
                     class="current"><a href="challenge.html">MEGC2023 Challenge</a>
                 <ul>
-                   <li><a href="challenge.html#training">Recommended Training Databases</a></li>
-                    <li><a href="challenge.html#test">Unseen Test Dataset</a></li>
-                    <li><a href="challenge.html#Eval">Evaluation Protocol</a></li>
+                   <li><a href="challenge.html#CCS">Cross-Cultural Spotting (CCS)</a></li>
+                    <li><a href="challenge.html#STR">Spot-then-Recognize (STR)</a></li>
+                    <li><a href="challenge.html#training">Recommended Training Databases</a></li>
                     <li><a href="challenge.html#submission">Submission</a></li>
-                    <li><a href="challenge.html#winners">Top three winners</a></li>
+                    <!-- <li><a href="challenge.html#winners">Top three winners</a></li> -->
                     <li><a href="challenge.html#questions">Frequently Asked Questions</a></li>
 
 
                 </ul>
             </li>
-            <li><a href="workshop.html">FME2023 Workshop</a></li>
-<!--            <li><a href="program.html">Program</a></li>-->
+            <!-- <li><a href="workshop.html">FME2023 Workshop</a></li>
+            <li><a href="program.html">Program</a></li>-->
             <li><a href="organisers.html">Organisers</a></li>
             <li><a href="review.html">Continuity</a></li>
         </ul>
@@ -58,6 +58,13 @@
     <section id="main">
         <div class="container">
             <section>
+                <p>This year's Grand Challenge comprises of two sub-challenges:</p>
+                <ul>
+                    <li>Cross-Cultural Spotting (CCS) Challenge</li>
+                    <li>Spot-then-Recognize (STR) Challenge</li>
+                </ul>
+                <p align="center">Click <a href="files/CfP_MEGC2024.pdf">here</a> to download the CFP.</p>
+                <!--
                 <p><b>UPDATE</b>: The leaderboard will be closing on 13th July, 9:00, Anywhere on Earth (AoE), and the top 3 entries on the leaderboard will be invited to submit papers to the conference by <b>14th July AoE (the official hard deadline of ACM MM grand challenges)</b>.
                 </br>
 ->For anyone outside of the top 3, we highly encourage you to submit to our sister workshop:  <a
@@ -77,14 +84,17 @@
 
                 <p><b>[update]</b> The LeaderBoard is available for result submission now! Click <a
                         href="challenge.html#Eval">here</a> for more detail.
-
+               -->
             </section>
 
             <section>
                 <header class="main">
-                    <h2 class="major"><span>ME and Macro-expression Spotting task</span></h2>
-                    <p align="center">Click <a href="files/CfP_MEGC2023.pdf">here</a> to download the CFP.</p>
+                    <h2 class="major"><span>ME and Macro-expression Spotting task</span></h2> <a name="CCS"></a>
                 </header>
+
+                <p>To facilitate the establishment of robust and transferable ME spotting methods, an unseen cross-cultural long video test set will be used to validate the efficacy of spotting algorithms. By “unseen” and “cross-cultural”, we mean that the data has not been publicly released, and consists of subjects from diverse ethnicities and cultures. All participating algorithms are required to run on this test set and submit their results for spotting micro- and macro-expressions.</p>
+
+                <p>This unseen test set will contain at least 30 long videos curated from unreleased data of the SAMM and CAS(ME)3 datasets. Both these datasets have different video frame rates (SAMM: 200 fps; CAS(ME)<sup>3</sup>: 30 fps), which will challenge participants to submit techniques that are also robust toward temporal sampling. For learning-based techniques, participants can use any kind of training set or combination of training sets, from the vast <a href="#training">selection of databases available</a>.</p> 
 
                 <h3>Recommended Training Databases</h3>  <a name="training"></a>
                 <uL>
@@ -292,7 +302,7 @@
                         <br/>
             </section>
 
-
+            <!--
             <section>
                  <h2 class="major"><span>Top three winners</span></h2><a name="winners"></a>
   <style type="text/css">
@@ -421,6 +431,8 @@
             </LI>
 
             </section>
+            -->
+
             <section>
                 <h2 class="major"><span>Frequently Asked Questions</span></h2>
                 <a name="questions"></a>
