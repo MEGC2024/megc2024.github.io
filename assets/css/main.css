@@ -3107,3 +3107,7 @@ input, select, textarea {
 			}
 
 	}
+
+code {
+	font-family: Consolas, monospace;
+}
