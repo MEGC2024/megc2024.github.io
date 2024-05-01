@@ -35,7 +35,7 @@
 <!--                </ul>-->
 <!--            </li>-->
             <li
-                    class="current"><a href="challenge.html">MEGC2023 Challenge</a>
+                    class="current"><a href="challenge.html">MEGC2024 Challenge</a>
                 <ul>
                    <li><a href="challenge.html#CCS">Cross-Cultural Spotting (CCS)</a></li>
                     <li><a href="challenge.html#STR">Spot-then-Recognize (STR)</a></li>
@@ -167,13 +167,13 @@
 
                 <h3>Unseen Test Dataset</h3>  <a name="test"></a>
                 <ul>
-                    <li>This year, we will be using the same unseen cross-cultural long-video test set to evaluate spotting algorithms' performances in a fairer manner.
+                    <li>This year, we will be using the same unseen cross-cultural long-video test set as MEGC2023 to evaluate spotting algorithms' performances in a fairer manner.
 
-                    <li>The unseen testing set (<tt>MEGC2023-testSet</tt>) contains 30 long video, including 10 long videos from
+                    <li>The unseen testing set (<code>MEGC2023-testSet</code>) contains 30 long video, including 10 long videos from
                         SAMM
                         (SAMM Challenge dataset) and 20 clips cropped from different videos in CAS(ME)<sup>3</sup> (unreleased before). The
                         frame rate for SAMM Challenge dataset is 200fps and the frame rate for CAS(ME)<sup>3</sup> is 30 fps. The participants should test on this unseen dataset.
-                    <LI>To obtain the <tt>MEGC2023-testSet</tt>, download and fill in the <a
+                    <LI>To obtain the <code>MEGC2023-testSet</code>, download and fill in the <a
                             href="files/SAMM_ReleaseAgreementV2.pdf">license agreement form of SAMM Challenge
                         dataset</a> and
                         the <a href="files/CAS3_clip_ReleaseAgreement.pdf">license agreement form of CAS(ME)<sup>3</sup>_clip</a>,
@@ -206,7 +206,7 @@
                 </uL>
 
                 <p></p>
-                <h3>Evaluation Protocol</h3>  <a name="Eval"></a>
+                <h3>Evaluation Protocol</h3>  <a name="CCS-eval"></a>
                 <uL>
                     <li>Information on the Codalab Leaderboard will be available soon.</li>
                     <!--
@@ -258,6 +258,41 @@
 
             </section>
 
+            <section>
+                <a name="STR"></a>
+                <header class="main">
+                    <h2 class="major"><span>Spot-then-Recognize (STR) Task</span></h2>
+                </header>
+
+                <p>Since the rapid advancement of ME research started about a decade ago, most works have been mainly focused on two separate tasks: spotting and recognition. The task of only recognizing the ME class can be unrealistic in real-world settings since it assumes that the ME sequence has already been identified - an ill-posed problem in the case of a continuous-running video. On the other hand, the spotting task is unrealistic in its applicability since it cannot interpret the actual emotional state of the person observed. 
+                </p>
+                    
+                <p>A more realistic setting, also known as "spot-then-recognize", performs spotting followed by recognition in a sequential manner. Only samples that have been correctly spotted in the spotting step (i.e. true positives) will be passed on to the recognition step to be classified for its emotion class.</p>
+
+                <p>The task will apply leave-one-subject-out (LOSO) cross-validation, and evaluated individually on the CAS(ME)<sup>2</sup> and SAMM Long Video datasets using selected metrics.</p> 
+
+                <p>References:</p>
+                    <ul>
+                       <li>Liong, G-B., See, J. and C.S. Chan (2023). Spot-then-recognize: A micro-expression analysis network for seamless evaluation
+                           of long videos.
+                        <i>Signal Processing: Image Communication</i>, vol. 110, pp. 116875, January 2023, doi: 10.1016/j.image.2022.116875
+                        </li>
+                    </ul>
+
+                <p></p>
+                <a name="STR-eval"></a>
+                <h3>Evaluation Protocol</h3>
+                <ul>
+                    <li>This challenge task will not use the Codalab Leaderboard, but evaluation can be performed offline using evaluation scripts that are provided (to be available soon).</li>
+                    <li>Spotted intervals from the Spotting step should be passed on to the Analysis step which predicts the emotion classes of the spotted intervals obtained earlier. </li>
+                    <li>The following metrics will be used to benchmark the performance on the CAS(ME)<sup>2</sup> and SAMM-LV datasets:</li>
+                        <ul>
+                            <li>F1-score, for Spotting and Analysis steps. <em>(Higher the better)</em></li>
+                            <li>Spot-then-Recognize Score (STRS), which is the product of the Spotting and Analysis F1-scores. <em>(Higher the better)</em></li>
+                        </ul>
+                </ul>
+                
+            </section>
 
             <section>
                 <a name="submission"></a>
@@ -277,20 +312,18 @@
 
                         <ul>
                             <li>Submitted papers (.pdf format) must use the ACM Article Template <a
-                                    href="https://www.acm.org/publications/proceedings-template">https://www.acm.org/publications/proceedings-template</a>
+                                href="https://www.acm.org/publications/proceedings-template">https://www.acm.org/publications/proceedings-template</a>
                                 as used by regular ACMMM submissions. Please use the template in traditional <b>double-column
-                                    format</b> to prepare your submissions. For example, word users may use Word Interim
+                                format</b> to prepare your submissions. For example, word users may use Word Interim
                                 Template, and latex users may use <b>sample-sigconf</b> template.
                             <li>Grand challenge papers will go through a single-blind review process. Each grand
-                                challenge paper
-                                submission is limited to 4 pages with 1-2 extra pages for references only.
+                                challenge paper submission is limited to 4 pages with 1-2 extra pages for references only.
                             <li> For all files with different task requirements except for the paper, please submit in a
                                 single zip file and upload to the submission system as supplementary material.
                                 <ul>
                                     <li>GitHub repository URL containing codes of your implemented method, and all other
-                                        relevant files such as feature/parameter data.
-
-                                    <li> CSV files reporting the results.
+                                        relevant files such as feature/parameter data.</li>
+                                    <li> CSV files reporting the results.</li>
 <!--                                    i.e.,-->
 <!--                                        cas_pred.csv, samm_pred.csv and oulu_pred.csv.-->
                                 </ul>
