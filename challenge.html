@@ -267,9 +267,8 @@
                 <p>Since the rapid advancement of ME research started about a decade ago, most works have been mainly focused on two separate tasks: spotting and recognition. The task of only recognizing the ME class can be unrealistic in real-world settings since it assumes that the ME sequence has already been identified - an ill-posed problem in the case of a continuous-running video. On the other hand, the spotting task is unrealistic in its applicability since it cannot interpret the actual emotional state of the person observed. 
                 </p>
                     
-                <p>A more realistic setting, also known as "spot-then-recognize", performs spotting followed by recognition in a sequential manner. Only samples that have been correctly spotted in the spotting step (i.e. true positives) will be passed on to the recognition step to be classified for its emotion class.</p>
-
-                <p>The task will apply leave-one-subject-out (LOSO) cross-validation, and evaluated individually on the CAS(ME)<sup>2</sup> and SAMM Long Video datasets using selected metrics.</p> 
+                <p>A more realistic setting, also known as "spot-then-recognize", performs spotting followed by recognition in a sequential manner. Only samples that have been correctly spotted in the spotting step (i.e. true positives) will be passed on to the recognition step to be classified for its emotion class.
+                The task will apply leave-one-subject-out (LOSO) cross-validation, and evaluated individually on the CAS(ME)<sup>2</sup> and SAMM Long Video datasets using <a href="#STR-eval">selected metrics</a>.</p> 
 
                 <p>References:</p>
                     <ul>
@@ -285,7 +284,7 @@
                 <ul>
                     <li>This challenge task will not use the Codalab Leaderboard, but evaluation can be performed offline using evaluation scripts that are provided (to be available soon).</li>
                     <li>Spotted intervals from the Spotting step should be passed on to the Analysis step which predicts the emotion classes of the spotted intervals obtained earlier. </li>
-                    <li>The following metrics will be used to benchmark the performance on the CAS(ME)<sup>2</sup> and SAMM-LV datasets:</li>
+                    <li>This task will apply leave-one-subject-out (LOSO) cross-validation, with the following metrics used to benchmark the average performance across all folds on the CAS(ME)<sup>2</sup> and SAMM-LV datasets:</li>
                         <ul>
                             <li>F1-score, for Spotting and Analysis steps. <em>(Higher the better)</em></li>
                             <li>Spot-then-Recognize Score (STRS), which is the product of the Spotting and Analysis F1-scores. <em>(Higher the better)</em></li>
