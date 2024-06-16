@@ -208,31 +208,32 @@
                 <p></p>
                 <h3>Evaluation Protocol</h3>  <a name="CCS-eval"></a>
                 <ul>
-                    <li>Information on the Codalab Leaderboard will be available soon.</li>
-                    <!--
-                    <Li> Participant should test the proposed algorithm on the unseen dataset and upload the result
-                        to the <a href="https://codalab.lisn.upsaclay.fr/competitions/14254">Leaderboard (https://codalab.lisn.upsaclay.fr/competitions/14254)</a> for the evaluation.
-                    -->
-                     <li>Baseline Method can be found in the following paper (please cite): 
-                        <br/>
-                        Zhang, L. W., Li, J., Wang, S. J., Duan, X. H., Yan, W. J., Xie, H. Y., & Huang, S. C. (2020, November). Spatio-temporal fusion for macro-and micro-expression spotting in long video sequences. In 2020 15th IEEE International Conference on Automatic Face and Gesture Recognition (FG 2020) (pp. 734-741). IEEE.
-                    <Li>MEGC2023 Result: <a
-                            href="https://codalab.lisn.upsaclay.fr/competitions/14254">Leaderboard</a>
-                    <li>Submissions to the Leaderboard is in a form of
-                            a <b>zip</b> file containining your predicted csv files with the following labels:
-                            <ul>
-                                <li>cas_pred.csv
-                                <li>samm_pred.csv
-                            </ul>
+                    <li>Submissions will use the Codalab Competition Leaderboard.</li>                   
+                    <li>Participants should test their proposed algorithm on the unseen dataset by uploading the predicted result
+                        to the <a href="https://codalab.lisn.upsaclay.fr/competitions/18524">Codalab Leaderboard (https://codalab.lisn.upsaclay.fr/competitions/18524)</a> where the evaluation metrics will be calculated.
                     </li>
-                    <li> An example submission can be seen at <a href="files/example_submission.zip">example_submission</a>
+                    <li>Evaluation metrics: F1-Score (Overall, SAMM, CAS), Precision (Overall, SAMM, CAS), Recall (Overall, SAMM, CAS)</li>
+                    <li>Submissions to the Leaderboard must be made in the form of a <b>zip</b> file containining the predicted csv files with the following filenames:<br />
+                        <ul>
+                            <li><code>cas_pred.csv</code> (for the CAS(ME)<sup>3</sup> samples)</li>
+                            <li><code>samm_pred.csv</code> (for the SAMM samples)</li>
+                        </ul>
+                    </li>
+                    <li>An example submission is provided here: <a href="files/example_submission.zip">example_submission</a>
                            and <a href="files/example_submission_withoutExpType.zip">example_submission_withoutExpType</a>.
                     </li>
-                    <li> Note: For submission without labelling expression type (me or mae), the labelling
-                                will be done automatically using ME threshold of 0.5s (15 frames for CAS and 100
-                                frames for SAMM).
+                    <li>Note: For submissions without labelling expression type (me or mae), the labelling
+                        will be done automatically using ME threshold of 0.5s (15 frames for CAS and 100
+                        frames for SAMM).
+                    </li>
+                    <li>The <b>baseline</b> method can be found in the following paper (please cite): 
+                        <br/>
+                        Zhang, L. W., Li, J., Wang, S. J., Duan, X. H., Yan, W. J., Xie, H. Y., & Huang, S. C. (2020, November). Spatio-temporal fusion for macro-and micro-expression spotting in long video sequences. In 2020 15th IEEE International Conference on Automatic Face and Gesture Recognition (FG 2020) (pp. 734-741). IEEE.
+                        <br>
+                        while previous submissions to MEGC2023 can be found here: <a
+                            href="https://codalab.lisn.upsaclay.fr/competitions/14254">Leaderboard</a>
                     </li>        
-                    </ul>
+                </ul>
                     <!--
                     <Li><b>submission stage</b>: TBD
                         <ul>
@@ -269,67 +270,87 @@
                 <p>A more realistic setting, also known as "spot-then-recognize", performs spotting followed by recognition in a sequential manner. Only samples that have been correctly spotted in the spotting step (i.e. true positives) will be passed on to the recognition step to be classified for its emotion class.
                 The task will apply leave-one-subject-out (LOSO) cross-validation, and evaluated individually on the CAS(ME)<sup>2</sup> and SAMM Long Video datasets using <a href="#STR-eval">selected metrics</a>.</p> 
 
-                <p>References:
+                <li>Reference:
                     <ul>
-                       <li>Liong, G-B., See, J. and C.S. Chan (2023). Spot-then-recognize: A micro-expression analysis network for seamless evaluation
-                           of long videos.
-                        <i>Signal Processing: Image Communication</i>, vol. 110, pp. 116875, January 2023, doi: 10.1016/j.image.2022.116875
-                        </li>
-                    </ul>
-                </p>
-                <p></p>
+                        <li>Liong, G-B., See, J. and C.S. Chan (2023). Spot-then-recognize: A micro-expression analysis network for seamless evaluation
+                            of long videos.
+                         <i>Signal Processing: Image Communication</i>, vol. 110, pp. 116875, January 2023, doi: 10.1016/j.image.2022.116875
+                         </li>
+                     </ul>
+                </li>
+
                 <a name="STR-eval"></a>
                 <h3>Evaluation Protocol</h3>
                 <ul>
-                    <li>This challenge task will not use the Codalab Leaderboard, but evaluation can be performed offline using evaluation scripts that are provided (to be available soon).</li>
-                    <li>Spotted intervals from the Spotting step should be passed on to the Analysis step which predicts the emotion classes of the spotted intervals obtained earlier. </li>
-                    <li>This task will apply leave-one-subject-out (LOSO) cross-validation, with the following metrics used to benchmark the average performance across all folds on the CAS(ME)<sup>2</sup> and SAMM-LV datasets:</li>
+                    <li>Submissions will use the Codalab Competition Leaderboard.</li>                   
+                    <li>Participants should upload the predicted results for both CAS(ME)<sup>2</sup> and SAMM Long Video datasets to the <a href="https://codalab.lisn.upsaclay.fr/competitions/19359">Codalab Leaderboard (https://codalab.lisn.upsaclay.fr/competitions/19359)</a>    
+                        where specific evaluation metrics will be calculated.
+                    </li>
+                    <li>Since there are no specific train-test partitions, leave-one-subject-out (LOSO) cross-validation must be used to perform spotting on the held-out samples. 
+                        The true positive (TP) intervals from the Spotting step should be passed onto the Analysis step to predict the emotion class. Sample code from <a href="https://github.com/genbing99/MEAN_Spot-then-recognize" target="_blank">here</a> can be used as template or reference.</li> 
+                    <li>Evaluation metrics (for SAMM, CAS): 
                         <ul>
                             <li>F1-score, for Spotting and Analysis steps. <em>(Higher the better)</em></li>
                             <li>Spot-then-Recognize Score (STRS), which is the product of the Spotting and Analysis F1-scores. <em>(Higher the better)</em></li>
                         </ul>
+                    </li>
+                    <li>Submissions to the Leaderboard must be made in the form of a <b>zip</b> file containining the predicted csv files with the following filenames:<br />
+                        <ul>
+                            <li><code>cas_pred.csv</code> (for the CAS(ME)<sup>2</sup> samples)</li>
+                            <li><code>samm_pred.csv</code> (for the SAMM Long Video samples)</li>
+                        </ul>
+                    </li>
+                    <li>An example submission is provided here: <a href="files/example_submission_STR.zip">example_submission</a>.</li>
+                    <li>The <b>baseline</b> method can be found in the following paper (please cite): 
+                        <br/>
+                        Liong, G-B., See, J. and C.S. Chan (2023). Spot-then-recognize: A micro-expression analysis network for seamless evaluation
+                        of long videos. Signal Processing: Image Communication, Vol. 110, pp. 116875.
+                    </li>        
                 </ul>
-                
             </section>
 
+            <!-- Submission Section -->
             <section>
                 <a name="submission"></a>
                 <h2 class="major"><span>Submission</span></h2>
                 <p> Please note: The submission deadline is at 11:59 p.m. of the stated deadline date <a
-                        href="https://www.timeanddate.com/time/zones/aoe">Anywhere</a> on Earth.</p>
+                        href="https://www.timeanddate.com/time/zones/aoe">Anywhere</a> on Earth (AoE).</p>
                 <uL>
-                    <Li><b>Submission platform for CCS task: <a href="https://codalab.lisn.upsaclay.fr/competitions/18524">https://codalab.lisn.upsaclay.fr/competitions/18524</a></b> 
-                        TBD
-                    <Li><b>Submission Deadline:</b>
-                        12th July 2023
-                    <Li><b>Notification:</b>
-                        TBD
-                    <Li><b>Camera-ready:</b>
-                        29th July 2024
-                    <Li><b>Submission guidelines:</b>
-
+                    <li><b>Challenge submission platform for CCS task: <a href="https://codalab.lisn.upsaclay.fr/competitions/18524">https://codalab.lisn.upsaclay.fr/competitions/18524</a></b></li> 
+                    <li><b>Challenge submission platform for STR task: <a href="https://codalab.lisn.upsaclay.fr/competitions/19359">https://codalab.lisn.upsaclay.fr/competitions/19359</a></b></li>
+                    <li><b><font color="red">Important Dates</font>:</b>
+                    <ul>    
+                        <Li><b>Submission Deadline (for both Challenge entry and Paper):</b>
+                            29th July 2024 </Li>
+                        <li><b>Notification of Results and Accepted Papers:</b>
+                            5th August 2024 </Li>
+                        <li><b>Camera-Ready Deadline (firm)</b>
+                            19th August 2024</li>
+                    </ul>                                               
+                    <li><b>Submission guidelines:</b>
                         <ul>
                             <li>Submitted papers (.pdf format) must use the ACM Article Template <a
                                 href="https://www.acm.org/publications/proceedings-template">https://www.acm.org/publications/proceedings-template</a>
-                                as used by regular ACMMM submissions. Please use the template in traditional <b>double-column
+                                as used by regular ACM MM submissions. Please use the template in traditional <b>double-column
                                 format</b> to prepare your submissions. For example, word users may use Word Interim
                                 Template, and latex users may use <b>sample-sigconf</b> template.
                             <li>Grand challenge papers will go through a single-blind review process. Each grand
                                 challenge paper submission is limited to 4 pages with 1-2 extra pages for references only.
-                            <li> For all files with different task requirements except for the paper, please submit in a
-                                single zip file and upload to the submission system as supplementary material.
+                            <li>For all other required files besides the paper, please submit in a
+                                single zip file and upload to the submission system as supplementary material. It is compulsory to include:
                                 <ul>
                                     <li>GitHub repository URL containing codes of your implemented method, and all other
                                         relevant files such as feature/parameter data.</li>
-                                    <li> CSV files reporting the results.</li>
-<!--                                    i.e.,-->
-<!--                                        cas_pred.csv, samm_pred.csv and oulu_pred.csv.-->
+                                    <li>CSV files reporting the results, i.e.
+                                        <code>cas_pred.csv</code>, <code>samm_pred.csv</code> (for both CCS and STR)</li>
                                 </ul>
+                                The organizers have the right to reject any submissions that: 1) are not accompanied by a paper,
+                                2) did not share the code repository and reported results for verification purposes. 
+                            </li>
                         </uL>
 
-                </Li>
-                </uL>
-                        <br/>
+                </li>
+                </ul>
             </section>
 
             <!--
@@ -488,8 +509,8 @@
         <!-- Copyright -->
         <div id="copyright">
             <ul class="menu">
-                <li>GET IN TOUCH: lijt@psych.ac.cn</li>
-                <li>&copy; MEGC2023. All rights reserved</li>
+                <li>GET IN TOUCH: j.see@hw.ac.uk, lijt@psych.ac.cn</li>
+                <li>&copy; MEGC2024. All rights reserved</li>
                 <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
             </ul>
         </div>
