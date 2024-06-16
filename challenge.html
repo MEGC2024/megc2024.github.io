@@ -57,12 +57,14 @@
     <!-- Main -->
     <section id="main">
         <div class="container">
+
+            <!-- Pre-amble section -->
             <section>
-                <p>Click <a href="files/CfP_MEGC2024.pdf">here</a> to download the CFP.</p>
-                This year's Grand Challenge comprises of two sub-challenges:
+                Click <a href="files/CfP_MEGC2024.pdf">here</a> to download the CFP.
+                This year's Grand Challenge comprises of two tracks:
                 <ul>
-                    <li><a href="#CCS">Cross-Cultural Spotting (CCS) Challenge</a></li>
-                    <li><a href="#STR">Spot-then-Recognize (STR) Challenge</a></li>
+                    <li><a href="#CCS">Cross-Cultural Spotting (CCS) Challenge</a> | <a href="https://codalab.lisn.upsaclay.fr/competitions/18524" target="_blank">Codalab site</a></li>
+                    <li><a href="#STR">Spot-then-Recognize (STR) Challenge</a> | <a href="https://codalab.lisn.upsaclay.fr/competitions/19359" target="_blank">Codalab site</a></li>
                 </ul>
                 <!--
                 <p><b>UPDATE</b>: The leaderboard will be closing on 13th July, 9:00, Anywhere on Earth (AoE), and the top 3 entries on the leaderboard will be invited to submit papers to the conference by <b>14th July AoE (the official hard deadline of ACM MM grand challenges)</b>.
@@ -87,6 +89,23 @@
                -->
             </section>
 
+            <!-- Important Dates Section -->
+            <section>
+                <a name="important-dates"></a>
+                <h2 class="major"><span>Important Dates</span></h2>
+                <ul>
+                    <li><b>Submission Open:</b>
+                        20th June 2024 </li>    
+                    <li><b>Submission Deadline (for both Codalab submission and Paper):</b>
+                        29th July 2024 </li>
+                    <li><b>Notification of Results and Accepted Papers:</b>
+                        5th August 2024 </li>
+                    <li><b>Camera-Ready Deadline (firm)</b>
+                        19th August 2024 </li>
+                    </ul>                                   
+            </section>
+
+            <!-- Track 1 CCS Section -->
             <section>
                 <a name="CCS"></a>
                 <header class="main">
@@ -212,7 +231,7 @@
                     <li>Participants should test their proposed algorithm on the unseen dataset by uploading the predicted result
                         to the <a href="https://codalab.lisn.upsaclay.fr/competitions/18524">Codalab Leaderboard (https://codalab.lisn.upsaclay.fr/competitions/18524)</a> where the evaluation metrics will be calculated.
                     </li>
-                    <li>Evaluation metrics: F1-Score (Overall, SAMM, CAS), Precision (Overall, SAMM, CAS), Recall (Overall, SAMM, CAS)</li>
+                    <li><b>Evaluation metrics</b>: F1-Score (Overall, SAMM, CAS), Precision (Overall, SAMM, CAS), Recall (Overall, SAMM, CAS)</li>
                     <li>Submissions to the Leaderboard must be made in the form of a <b>zip</b> file containining the predicted csv files with the following filenames:<br />
                         <ul>
                             <li><code>cas_pred.csv</code> (for the CAS(ME)<sup>3</sup> samples)</li>
@@ -254,10 +273,10 @@
                                 ranking.
                         </ul>
                     -->
-                </uL>
-
+                </ul>
             </section>
-
+            
+            <!-- Track 2 STR Section -->
             <section>
                 <a name="STR"></a>
                 <header class="main">
@@ -279,6 +298,7 @@
                      </ul>
                 </li>
 
+                <p></p>
                 <a name="STR-eval"></a>
                 <h3>Evaluation Protocol</h3>
                 <ul>
@@ -288,7 +308,7 @@
                     </li>
                     <li>Since there are no specific train-test partitions, leave-one-subject-out (LOSO) cross-validation must be used to perform spotting on the held-out samples. 
                         The true positive (TP) intervals from the Spotting step should be passed onto the Analysis step to predict the emotion class. Sample code from <a href="https://github.com/genbing99/MEAN_Spot-then-recognize" target="_blank">here</a> can be used as template or reference.</li> 
-                    <li>Evaluation metrics (for SAMM, CAS): 
+                    <li><b>Evaluation metrics</b> (for SAMM, CAS): 
                         <ul>
                             <li>F1-score, for Spotting and Analysis steps. <em>(Higher the better)</em></li>
                             <li>Spot-then-Recognize Score (STRS), which is the product of the Spotting and Analysis F1-scores. <em>(Higher the better)</em></li>
@@ -300,7 +320,7 @@
                             <li><code>samm_pred.csv</code> (for the SAMM Long Video samples)</li>
                         </ul>
                     </li>
-                    <li>An example submission is provided here: <a href="files/example_submission_STR.zip">example_submission</a>.</li>
+                    <li>An example submission is provided here: <a href="files/example_submission_STR.zip">example_submission_STR</a>.</li>
                     <li>The <b>baseline</b> method can be found in the following paper (please cite): 
                         <br/>
                         Liong, G-B., See, J. and C.S. Chan (2023). Spot-then-recognize: A micro-expression analysis network for seamless evaluation
@@ -315,18 +335,9 @@
                 <h2 class="major"><span>Submission</span></h2>
                 <p> Please note: The submission deadline is at 11:59 p.m. of the stated deadline date <a
                         href="https://www.timeanddate.com/time/zones/aoe">Anywhere</a> on Earth (AoE).</p>
-                <uL>
+                <ul>
                     <li><b>Challenge submission platform for CCS task: <a href="https://codalab.lisn.upsaclay.fr/competitions/18524">https://codalab.lisn.upsaclay.fr/competitions/18524</a></b></li> 
-                    <li><b>Challenge submission platform for STR task: <a href="https://codalab.lisn.upsaclay.fr/competitions/19359">https://codalab.lisn.upsaclay.fr/competitions/19359</a></b></li>
-                    <li><b><font color="red">Important Dates</font>:</b>
-                    <ul>    
-                        <Li><b>Submission Deadline (for both Challenge entry and Paper):</b>
-                            29th July 2024 </Li>
-                        <li><b>Notification of Results and Accepted Papers:</b>
-                            5th August 2024 </Li>
-                        <li><b>Camera-Ready Deadline (firm)</b>
-                            19th August 2024</li>
-                    </ul>                                               
+                    <li><b>Challenge submission platform for STR task: <a href="https://codalab.lisn.upsaclay.fr/competitions/19359">https://codalab.lisn.upsaclay.fr/competitions/19359</a></b></li>                
                     <li><b>Submission guidelines:</b>
                         <ul>
                             <li>Submitted papers (.pdf format) must use the ACM Article Template <a
