@@ -96,11 +96,11 @@
                     <li><b>Submission Open:</b>
                         20th June 2024 </li>    
                     <li><b>Submission Deadline (for both Codalab submission and Paper):</b>
-                        29th July 2024 </li>
+                        <strike>29th July 2024</strike> <font color="red">6th August 2024</font><b>(FIRM)</b></li>
                     <li><b>Notification of Results and Accepted Papers:</b>
-                        5th August 2024 </li>
-                    <li><b>Camera-Ready Deadline (firm)</b>
-                        19th August 2024 </li>
+                        <strike>5th August 2024</strike> <font color="red">12th August 2024</font> </li>
+                    <li><b>Camera-Ready Deadline</b>
+                        19th August 2024 <b>(FIRM)</b></li>
                     </ul>                                   
             </section>
 
@@ -497,7 +497,7 @@
             <section>
                 <h2 class="major"><span>Frequently Asked Questions</span></h2>
                 <a name="questions"></a>
-                <OL>
+                <ol>
                     <li>Q: How to deal with the spotted intervals with overlap? <br/>
                         A: We consider that each ground-truth interval corresponds to at most one single spotted
                         interval. If your algorithm detects multiple with overlap, you should merge them into an optimal
@@ -505,8 +505,13 @@
                         cares about the optimal interval obtained.
                     </li>
 
-
-                </OL>
+                    <li>Q: For the STR challenge, how many classes are used in the classification part? <br/>
+                        A: You are required to only classify emotions into three classes: <code>"negative"</code>, <code>"positive"</code>, <code>"surprise"</code>. 
+                        Only correctly spotted micro-expressions are passed on to the classification part, also knowns as Analysis (on the Leaderboard).
+                        The <code>"other"</code> class is <b>not included</b> in the evaluation calculation for the Analysis part. However, all occurrences, including those labelled 
+                        with the <code>"other"</code> class are considered in the Spotting part as they are micro-expressions.
+                    </li>
+                </ol>
 
 
                 <br/>
